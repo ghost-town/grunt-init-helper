@@ -1,6 +1,6 @@
 /*
  * {%= name %}
- * https://github.com/assemble/{%= name %}
+ * https://github.com/{%= author_name %}/{%= name %}
  * Copyright (c) {%= grunt.template.today('yyyy') %} 
  * Licensed under the {%= licenses.join(', ') %} license{%= licenses.length === 1 ? '' : 's' %}.
  */
@@ -11,34 +11,42 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
+    pkg: grunt.file.readJSON('package.json'),
+
+    shell: {
+      npm: {
+        command: 'npm publish'
+      },
+      bower: {
+        command: 'bower register <%= pkg.name %> <%= pkg.repository %> /y'
+      }
+    },
 
     assemble: {
       pages: {
         options: {
           flatten: true,
-          assets: 'dest/assets',
-          layout: 'src/templates/layouts/default.hbs',
-          data: 'src/data/*.{json,yml}',
-          partials: 'src/templates/partials/*.hbs'
+          helpers: ['test/helper-example.js', 'helper-{%= helper_name %}.js'],
+          data: 'test/example.json'
         },
         files: {
-          'dest/': ['src/templates/pages/*.hbs']
+          'test/': ['test/example.hbs']
         }
       }
-    },
-
-    // Before generating any new files, 
-    // remove any previously-created files.
-    clean: {
-      example: ['dest/**/*.html']
     }
   });
 
   // Load npm plugins to provide necessary tasks.
   grunt.loadNpmTasks('assemble');
-  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-shell');
 
   // Default tasks to be run.
-  grunt.registerTask('default', ['clean', 'assemble']);
+  grunt.registerTask('default',  ['assemble']);
+
+  // Publish helper to NPM or rgister helper as a 
+  // bower component. Delete these after you've used 
+  // them, and remove grunt-shell as a dependency.
+  grunt.registerTask('publish',  ['shell:npm']);
+  grunt.registerTask('register', ['shell:bower']);
 };
 

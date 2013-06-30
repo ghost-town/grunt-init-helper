@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Example helper usage</title>
+    <link href="http://twitter.github.io/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body>
+  <div class="page-header">
+    <h1>Example helper usage</h1>
+  </div>
+
+    <h2>Example "track" helper</h2>
+    <p>This helper was included to demonstrate how helpers work.</p>
+    <ul>
+      <li> {{#example}} <a class="nav-link" href="{{url}}" {{track navbar}}>{{text}}</a> {{/example}} </li>
+    </ul>
+
+    <h2>{%= helper_name %} helper</h2>
+    <p>{%= description %}.</p>
+    {{{%= helper_name %} "This is your helper."}}
+
+  </body>
+</html>
+

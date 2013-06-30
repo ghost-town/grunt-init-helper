@@ -1,22 +1,22 @@
 {
-  "name": "grunt-init-assemble",
-  "version": "0.2.0",
-  "description": "Initialize an Assemble project.",
-  "homepage": "https://github.com/assemble/assemble/",
+  "name": "grunt-init-assemble-helper",
+  "version": "0.1.0",
+  "description": "Quickly create a Handlebars helper that can easily be used with Assemble",
+  "homepage": "https://github.com/assemble/grunt-init-assemble-helper/",
   "author": {
     "name": "Jon Schlinkert"
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/assemble/grunt-init-assemble.git"
+    "url": "git://github.com/assemble/grunt-init-assemble-helper.git"
   },
   "bugs": {
-    "url": "https://github.com/assemble/grunt-init-assemble/issues"
+    "url": "https://github.com/assemble/grunt-init-assemble-helper/issues"
   },
   "licenses": [
     {
       "type": "MIT",
-      "url": "https://github.com/assemble/grunt-init-assemble/blob/master/LICENSE-MIT"
+      "url": "https://github.com/assemble/grunt-init-assemble-helper/blob/master/LICENSE-MIT"
     }
   ],
   "main": "template.js",

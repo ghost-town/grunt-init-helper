@@ -11,19 +11,19 @@
 var path  = require('path');
 
 // Basic template description.
-exports.description = 'Create a project with Assemble and Grunt, including starter templates and data.';
+exports.description = 'Grunt init template for creating Assemble helpers.';
 
 // Template-specific notes to be displayed before question prompts.
 exports.notes = 'For more information about creating Assemble projects, ' +
-  'please see the docs at http://github.com/assemble/assemble/wiki/getting-started';
+  'please see the docs at http://assemble.io/docs/';
 
 // Template-specific notes to be displayed after question prompts.
-exports.after = 'You should now install project dependencies with _npm ' +
-  'install_. After that, you may execute project tasks with _grunt assemble_. For ' +
-  'more information about installing and configuring Assemble, please see ' +
-  'the Getting Started guide:' +
+exports.after = 'Now install project dependencies with "npm install".' + 
+  'After that, you may execute project tasks with "grunt assemble". For ' +
+  'more information about installing and configuring Assemble, please ' +
+  'visit:' +
   '\n\n' +
-  'http://github.com/assemble/assemble/wiki/getting-started';
+  'http://assemble.io/docs/';
 
 // Any existing file or directory matching this wildcard will cause a warning.
 exports.warnOn = ['*'];
@@ -40,15 +40,15 @@ exports.template = function(grunt, init, done) {
 
   init.process({type: 'assemble'}, [
     // Prompt for these values.
-    init.prompt('name', 'assemble'),
+    init.prompt('helper_name'),
     {
       name: 'description',
       message: 'Description',
-      default: 'Assemble a website from templates and data.',
+      default: 'Handlebars helper for Assemble.',
       warning: 'May consist of any characters.'
     },
     init.prompt('version'),
-    init.prompt('author_name', 'assemble'),
+    init.prompt('author_name'),
     init.prompt('repository'),
     init.prompt('homepage'),
     init.prompt('author_email'),
@@ -71,12 +71,14 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
 
     // Set a few grunt-plugin-specific properties.
+    props.name = 'assemble-helpers-' + props.helper_name;
     props.repository = 'git://github.com/' + props.author_name + '/' + props.name + '.git';
     props.hompage    = 'https://github.com/' + props.author_name + '/' + props.name + '/';
     props.main       = 'Gruntfile.js';
     props.npm_test   = 'grunt assemble';
     props.keywords   = ['gruntplugin', 'build', 'site generator', 'component generator', 'blog generator', 'handlebars', 'templates'];
     props.devDependencies = {
+      'grunt-shell': '~0.3.0',
       'grunt-contrib-clean': '~0.4.1',
       'assemble': props.assemble_version
     };
@@ -93,7 +95,7 @@ exports.template = function(grunt, init, done) {
     // Actually copy (and process) files.
     init.copyAndProcess(files, props);
 
-    // Generate package.json file.
+    // Generate package.json and bower.json files.
     init.writePackageJSON('package.json', props);
 
     // All done!
