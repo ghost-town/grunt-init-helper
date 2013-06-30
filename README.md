@@ -13,7 +13,14 @@ Then, in empty directory:
 
 * Run `grunt-init assemble-helper`
 * Then `npm i`
-* Then `grunt assemble` to test that it works
+* Then `grunt` to test that it works
+
+In the the `test` directory you will find the following files:
+
+* `example.hbs`: this is an example template, which contains code for both an example helper and a starting point for your new custom helper.
+* `example.json`: this is the data file used by the helper
+* `helper-example.js`: umm...
+
 
 
 ## Detailed instructions
