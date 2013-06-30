@@ -78,8 +78,7 @@ exports.template = function(grunt, init, done) {
     props.npm_test   = 'grunt assemble';
     props.keywords   = ['gruntplugin', 'build', 'site generator', 'component generator', 'blog generator', 'handlebars', 'templates'];
     props.devDependencies = {
-      'grunt-shell': '~0.3.0',
-      'grunt-contrib-clean': '~0.4.1',
+      'grunt-contrib-jshint': '~0.6.0',
       'assemble': props.assemble_version
     };
     props.travis = /y/i.test(props.travis);
