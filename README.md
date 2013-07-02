@@ -6,7 +6,7 @@
 If you have `grunt-init` and are familiar with using it:
 
 ``` bash
-git clone git@github.com:assemble/assemble-init.git ~/.grunt-init/assemble
+git clone https://github.com/assemble/grunt-init-assemble-helper.git ~/.grunt-init/assemble
 ```
 
 Then, in empty directory:

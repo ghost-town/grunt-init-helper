@@ -1,6 +1,6 @@
 {
   "name": "grunt-init-assemble-helper",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Quickly create a Handlebars helper that can easily be used with Assemble",
   "homepage": "https://github.com/assemble/grunt-init-assemble-helper/",
   "author": {
