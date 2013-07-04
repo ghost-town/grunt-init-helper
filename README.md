@@ -6,10 +6,10 @@
 If you have `grunt-init` and are familiar with using it, `git clone` this repo into the directory that [grunt init](http://gruntjs.com/project-scaffolding#installing-templates) recommends for your operating system. The following is recommended for Windows users.
 
 ``` bash
-git clone https://github.com/assemble/grunt-init-assemble-helper.git ~/.grunt-init/assemble
+git clone https://github.com/assemble/grunt-init-assemble-helper.git ~/.grunt-init/assemble-helper
 ```
 
-**Note**: you can make the template available as any name you choose by simply changing the name of the folder that the template is installed into. So instead of `~/.grunt-init/assemble`, you may change the name to `~/.grunt-init/foo` so that the template can be used with the following command: `grunt-init foo`.
+**Note**: you can make the template available as any name you choose by simply changing the name of the folder that the template is installed into. So instead of `~/.grunt-init/assemble-helper`, you may change the name to `~/.grunt-init/foo` so that the template can be used with the following command: `grunt-init foo`.
 
 
 Then, in empty directory:
