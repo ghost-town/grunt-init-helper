@@ -49,6 +49,7 @@ In the the `test` directory you will find the following files:
 
 ## Related info
 
+* [grunt-init-assemble](https://github.com/assemble/grunt-init-assemble)
 * [handlebars-helpers](https://github.com/assemble/handlebars-helpers)
 * [Assemble's documentation](http://assemble.io)
 * [assemble-less](https://github.com/assemble/assemble-less)

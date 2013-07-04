@@ -1,4 +1,3 @@
 {
-  "name.js": "helper-{%= helper_name %}.js",
-  "name.sublime-project": "{%= name %}.sublime-project"
+  "name.js": "helper-{%= name %}.js"
 }
