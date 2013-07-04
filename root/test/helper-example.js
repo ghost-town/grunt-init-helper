@@ -5,7 +5,7 @@
     // event tracking setup with google analytics first: 
     // https://developers.google.com/analytics/devguides/collection/gajs/eventTrackerGuide?hl=pt-PT
     Handlebars.registerHelper('track', function(obj) {
-      var code = 'onclick="_gaq.push([\'_trackEvent\', \'' + obj.category + '\', \'' + obj.action + '\', \'' + obj.label + '\']);"'
+      var code = 'onclick="_gaq.push([\'_trackEvent\', \'' + obj.category + '\', \'' + obj.action + '\', \'' + obj.label + '\']);"';
       return new Handlebars.SafeString(code);
     });
 
