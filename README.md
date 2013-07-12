@@ -4,7 +4,7 @@
 
 
 ## Installation
-If you haven't already done so, install [Grunt][grunt] and [grunt-init][]: 
+If you haven't already done so, install [Grunt][grunt] and [grunt-init][]:
 
 ``` bash
 npm i -g grunt-cli grunt-init
@@ -34,12 +34,26 @@ _Note that no warning will be issued if you create a helper with the same name a
 
 ## Related info
 
-* [grunt-init-assemble](https://github.com/assemble/grunt-init-assemble)
+* [grunt-init-assemble](https://github.com/assemble/grunt-init-assemble): Initialize new Assemble projects, with example mixins, helpers, templates and data.
 * [handlebars-helpers](https://github.com/assemble/handlebars-helpers)
 * [Assemble's documentation](http://assemble.io)
 * [assemble-less](https://github.com/assemble/assemble-less)
 * [assemble-examples](https://github.com/assemble/assemble-examples)
 
+
+## Author
+
+**[Jon Schlinkert](http://github.com/jonschlinkert)**
+
++ [http://twitter.com/jonschlinkert](http://twitter.com/jonschlinkert)
++ [http://github.com/jonschlinkert](http://github.com/jonschlinkert)
+
+
+## Copyright and license
+Copyright 2013 Jon Schlinkert
+
+[MIT License](LICENSE-MIT)
+
+
 [grunt]: http://gruntjs.com
 [grunt-init]: http://gruntjs.com/project-scaffolding#installing-templates
-

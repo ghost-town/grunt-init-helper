@@ -4,17 +4,13 @@
   "description": "Quickly create a Handlebars helper that can easily be used with Assemble",
   "homepage": "https://github.com/assemble/grunt-init-helper/",
   "author": {
-    "name": "assemble",
-    "url": "https://assemble.io/"
+    "name": "Jon Schlinkert",
+    "url": "https://github.com/jonschlinkert"
   },
-  "contributors": [
+  "licenses": [
     {
-      "name": "Jon Schlinkert",
-      "url": "http://github.com/jonschlinkert"
-    },
-    {
-      "name": "Brian Woodward",
-      "url": "http://github.com/doowb"
+      "type": "MIT",
+      "url": "https://github.com/assemble/grunt-init-assemble/blob/master/LICENSE-MIT"
     }
   ],
   "licenses": [
