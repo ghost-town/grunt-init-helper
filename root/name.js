@@ -1,7 +1,11 @@
 (function() {
   module.exports.register = function(Handlebars, options) {
 
-    // Customize this helper
+    /**
+     * Helper name
+     * @param  {[type]} str [description]
+     * @return {[type]}     [description]
+     */
     Handlebars.registerHelper('{%= name %}', function(str) {
       var content = '<strong>' + str + '</strong>';
       return new Handlebars.SafeString(content);
