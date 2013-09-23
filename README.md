@@ -2,7 +2,6 @@
 
 > Quickly create helpers for use with Assemble, using [grunt-init][]. Includes README documentation, test files, metadata, bower.json and package.json.
 
-
 ## Installation
 If you haven't already done so, install [Grunt][grunt] and [grunt-init][]:
 
